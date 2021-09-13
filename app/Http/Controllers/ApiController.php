@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Webinar;
+use App\Models\Search;
 use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
-    public function getWebinars(Request $request, Webinar $webinar){
+    public function getWebinars(Request $request, Search $search){
 
-        return view('results', ['results' => $webinar->getInfoWebinars($request->data)]);
+        return view('results', ['results' => $search->getInfoWebinars($request->data)]);
     }
 }
